@@ -20,7 +20,7 @@ function normalizeEventUrl(rawUrl) {
 
 export function initAnalytics() {
     // Skip Netlify deploy previews and local/fork hosts so only live ocm.software sends events.
-    if (location.hostname !== "ocm.software") {
+    if (location.hostname !== "ocm.software" && location.hostname !== "klocke-io.github.io") {
         return;
     }
     init({
